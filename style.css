@@ -4,9 +4,34 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%; /*1rem = 10px*/
+  --font-family-default: sans-serif;
+  --font-family-primary: "Open Sans", var(--font-family-default);
+  --font-family-secondary: "Mulish", var(--font-family-default);
+  --font-family-tertiary: "DM Sans", var(--font-family-default);
+}
+
+body {
+  font-family: var(--font-family-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
 .page {
   width: 1000px;
   margin: 65px auto 0;
+}
+
+h1,
+nav {
+  font-family: var(--font-family-secondary);
+}
+
+button {
+  font-family: var(--font-family-tertiary);
 }
 
 nav {
@@ -25,6 +50,82 @@ nav ul {
   gap: 48px;
 }
 
-a {
-  text-decoration: none;
+li a {
+  font-size: 1.8rem;
+  color: #1f1534;
+  opacity: 0.5;
+}
+
+li a:hover {
+  opacity: 1;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-img {
+  width: 41.7rem;
+}
+
+.text {
+  width: 48.9rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.text h1 {
+  color: #000;
+  font-size: 4.9rem;
+  font-weight: normal;
+  line-height: 5.6rem;
+}
+
+.text h1 span {
+  color: #89c5cc;
+  font-weight: bold;
+}
+
+.text p {
+  color: #7d7987;
+  font-size: 1.4rem;
+  line-height: 28px;
+}
+
+.text button {
+  display: flex;
+  width: 18rem;
+  height: 56px;
+  padding: 14px 32px 15px 32px;
+  align-items: center;
+  gap: 10px;
+
+  border: none;
+  border-radius: 4px;
+  background: #69b99d;
+  font-size: 1.6rem;
+  color: #f9f9f9;
+  cursor: pointer;
+}
+
+.text button:hover {
+  background: #3b8169;
+}
+
+footer {
+  color: #000;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 28px;
+
+  margin-top: 8.2rem;
+}
+
+footer a {
+  color: #000;
+  font-weight: 700;
 }
