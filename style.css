@@ -129,3 +129,9 @@ footer a {
   color: #000;
   font-weight: 700;
 }
+
+#balls {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
