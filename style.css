@@ -10,10 +10,20 @@
   --font-family-primary: "Open Sans", var(--font-family-default);
   --font-family-secondary: "Mulish", var(--font-family-default);
   --font-family-tertiary: "DM Sans", var(--font-family-default);
+  --bg-color: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(227, 255, 248, 0.38) 100%);
+  --color-gray: #7d7987;
+  --color-black: #000;
+  --color-black-400: #1f1534;
+  --color-white-200: #f9f9f9;
+  --color-green-400: #3b8169;
+  --color-green-300: #69b99d;
+  --color-green-200: #89c5cc;
 }
 
 body {
   font-family: var(--font-family-primary);
+  background: var(--bg-color);
+  min-height: 100vh;
 }
 
 a {
@@ -21,17 +31,14 @@ a {
 }
 
 .page {
-  width: 1000px;
-  margin: 65px auto 0;
+  width: 100rem;
+  margin: 0 auto;
+  padding-top: 6.5rem;
 }
 
 h1,
-nav {
+ul {
   font-family: var(--font-family-secondary);
-}
-
-button {
-  font-family: var(--font-family-tertiary);
 }
 
 nav {
@@ -39,7 +46,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 55px;
+  margin-bottom: 5.5rem;
 }
 
 nav ul {
@@ -47,22 +54,23 @@ nav ul {
 
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 4.8rem;
 }
 
-li a {
+ul li a {
   font-size: 1.8rem;
-  color: #1f1534;
+  color: var(--color-black-400);
   opacity: 0.5;
 }
 
-li a:hover {
+ul li a:hover {
   opacity: 1;
   font-weight: bold;
 }
 
 main {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -79,54 +87,56 @@ main {
 }
 
 .text h1 {
-  color: #000;
+  color: var(--color-black);
   font-size: 4.9rem;
   font-weight: normal;
   line-height: 5.6rem;
 }
 
 .text h1 span {
-  color: #89c5cc;
+  color: var(--color-green-200);
   font-weight: bold;
 }
 
 .text p {
-  color: #7d7987;
+  color: var(--color-gray);
   font-size: 1.4rem;
-  line-height: 28px;
+  line-height: 2.8rem;
 }
 
 .text button {
-  display: flex;
   width: 18rem;
-  height: 56px;
-  padding: 14px 32px 15px 32px;
-  align-items: center;
-  gap: 10px;
-
+  height: 5.6rem;
+  background: var(--color-green-300);
+  padding: 1.4rem 3.2rem 1.5rem 3.2rem;
   border: none;
   border-radius: 4px;
-  background: #69b99d;
+  font-family: var(--font-family-tertiary);
+  color: var(--color-white-200);
   font-size: 1.6rem;
-  color: #f9f9f9;
   cursor: pointer;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .text button:hover {
-  background: #3b8169;
+  background: var(--color-green-400);
 }
 
 footer {
-  color: #000;
+  color: var(--color-black);
   text-align: center;
   font-size: 1.4rem;
-  line-height: 28px;
+  line-height: 2.8rem;
 
-  margin-top: 8.2rem;
+  margin-top: 8rem;
 }
 
 footer a {
-  color: #000;
+  color: var(--color-black);
   font-weight: 700;
 }
 
